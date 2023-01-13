@@ -32,6 +32,25 @@ a {
 ul li {
   list-style: none;
 }
+.primary-btn {
+  height: 44px;
+  color: #fff;
+  padding: 10px 24px;
+  background: #e02c6d;
+  border-radius: 41px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+.primary-btn i {
+  display: inline-block;
+  margin-left: 5px;
+  top: 3px;
+  position: relative;
+}
+img {
+  max-width: 100%;
+}
 /*----------------------
       Header Styles 
 -----------------------*/
@@ -42,6 +61,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.humber-menu {
+  display: none;
 }
 .logo a {
   font-weight: 700;
@@ -63,6 +85,7 @@ nav {
   font-size: 16px;
   line-height: 24px;
   color: var(--primary-color);
+  text-transform: capitalize;
 }
 .search,
 .cart {
@@ -76,8 +99,61 @@ nav {
   cursor: pointer;
 }
 .cart i {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 500;
   color: var(--primary-color);
   cursor: pointer;
+}
+/*----------------------
+      Banner Styles 
+-----------------------*/
+.banner {
+  padding-top: 80px;
+}
+.banner-container {
+  display: flex;
+  gap: 130px;
+  align-items: center;
+}
+.banner-title {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 70px;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+.banner-description {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+/* Media Queries */
+@media screen and (max-width: 992px) {
+  .menu,
+  .nav-right-container {
+    gap: 25px;
+  }
+}
+/* Tablets Responsive code */
+@media screen and (max-width: 768px) {
+  .humber-menu {
+    display: flex;
+  }
+  .menu,
+  .search {
+    display: none;
+  }
+  .cart i,
+  .humber-menu {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+/* Mobile Responsive code */
+@media screen and (max-width: 576px) {
+  .logo a {
+    font-size: 16px;
+  }
 }
