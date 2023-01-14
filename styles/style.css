@@ -115,6 +115,10 @@ nav {
   gap: 130px;
   align-items: center;
 }
+.banner-left,
+.banner-img {
+  flex: 1;
+}
 .banner-title {
   font-weight: 700;
   font-size: 52px;
@@ -129,11 +133,180 @@ nav {
   color: var(--primary-color);
   margin-bottom: 20px;
 }
-/* Media Queries */
+/*----------------------
+    Brand logo Styles 
+-----------------------*/
+.brand-logo {
+  padding-top: 100px;
+}
+.brand-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 35px 50px;
+  align-items: center;
+}
+/*-----------------------------
+  Popular Collection Styles 
+------------------------------*/
+.popular-collection {
+  padding-top: 100px;
+}
+.section-title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 70px;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+.popular-collection-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 65px;
+  gap: 30px;
+}
+.popular-collection-item {
+  background: #ffffff;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 17px 15px;
+}
+.popular-item-img {
+  width: 300px;
+  height: 256px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+.popular-item-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
+  color: #18191f;
+  margin-bottom: 6px;
+}
+.price {
+  font-weight: 400;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.87);
+  padding-top: 8px;
+}
+.rating span i {
+  font-size: 11px;
+  color: #fb8200;
+}
+.rating-number {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: #5e6366;
+}
+.popular-item-description {
+  font-weight: 700;
+  font-size: 14px;
+  color: #787885;
+}
+.see-more {
+  text-align: end;
+  padding: 0 65px;
+  margin-top: 50px;
+}
+.see-more-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(224, 44, 109, 0.87);
+  border: none;
+}
+/*-------------------------------
+         Featured Products
+---------------------------------*/
+.featured-product {
+  padding-top: 100px;
+}
+.featured-product-container {
+  padding: 0 45px;
+  display: flex;
+  gap: 96px;
+  align-items: center;
+}
+.featured-img img {
+  max-width: 404px;
+}
+.featured-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+  color: #0a0826;
+  margin-bottom: 18px;
+}
+.featured-description {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6c6c6c;
+  margin-bottom: 20px;
+}
+.join-btn {
+  border-radius: 2px;
+  padding: 6px 24px;
+}
+/*-------------------------------
+          Footer Styles
+---------------------------------*/
+.footer {
+  margin-top: 100px;
+  background: #0a0826;
+  padding: 50px 0px;
+}
+.footer-content {
+  text-align: center;
+}
+.footer-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.footer-description {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #d9dbe1;
+  margin-bottom: 27px;
+}
+.social-icon {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+.social-icon a i {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  background: #4d4a7c73;
+  padding: 10px;
+  border-radius: 23px;
+  font-size: 17px;
+}
+/*-------------------------------
+          Media Queries
+---------------------------------*/
 @media screen and (max-width: 992px) {
   .menu,
   .nav-right-container {
     gap: 25px;
+  }
+  .banner-container {
+    gap: 40px;
+  }
+  .banner-title {
+    font-size: 40px;
+    line-height: 56px;
+  }
+  .brand-container {
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 20px;
   }
 }
 /* Tablets Responsive code */
@@ -150,10 +323,40 @@ nav {
     font-size: 24px;
     font-weight: 500;
   }
+  .banner-title {
+    font-size: 31px;
+    line-height: 40px;
+  }
+  .brand-container {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    padding: 20px 0;
+  }
 }
 /* Mobile Responsive code */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 680px) {
   .logo a {
     font-size: 16px;
+  }
+  .banner-container {
+    flex-direction: column-reverse;
+  }
+  .banner-left {
+    text-align: center;
+  }
+  .banner-img {
+    width: 73%;
+  }
+  .brand-logo {
+    padding-top: 50px;
+  }
+
+  .brand-item {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 440px) {
+  .brand-item img {
+    width: 50px;
   }
 }
